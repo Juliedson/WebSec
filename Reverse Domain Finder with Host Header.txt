@@ -1,0 +1,18 @@
+While you are entering on a server that uses IP X.X.X.X
+You can change Host header to find if a website is hosted on and the files are shared in the same URL.
+
+How? To test it you can use Fiddler https://www.telerik.com/download/fiddler, https://portswigger.net/burp 
+or try a Chrome Extension called "Modify Headers for Google Chrome™" here: https://chrome.google.com/webstore/detail/modify-headers-for-google/innpjfdalfhpcoinfnehdnbkglpmogdi
+or try a XHR HTTP as well, but most of the requests are being blocked by CORS policy and Chrome Security Auditor..
+
+
+Using Modify Headers you'll add the Host you guess:
+
+E.g:
+
+You are accessing IP 34.237.68.127 and you think a website xxxx.com is hosted on
+So you add a Host header xxxx.com and wait for the reply, if it's not replying or replied a error page may not be hosted.
+You can use it to get CPANEL and a lot of software's admin's pages.
+You can use this to "Bypass" Cloudflare, but it'll be a hard work. Obviously.
+
+
