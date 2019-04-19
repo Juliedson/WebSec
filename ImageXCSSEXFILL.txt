@@ -1,0 +1,29 @@
+## attackscript.html
+
+<link rel="stylesheet" href="aa23.gif" charset="utf-8"/> </link>
+
+<p class="dotted">aaa</p>
+	<p class="dotted2">aaa</p>
+  
+## aa23.gif [fake .gif or injected code encoded] example:
+
+FAKE .gif:
+
+p.dotted {EXFILL DATA}
+p.dotted2 {EXFILL DATA}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+
+## Injected code on a real and working(partially) .GIF example:
+
+
+p.dotted%20%7BEXFILL%20DATA%7D%0Ap.dotted2%20%7BEXFILL%20DATA%7D%0Ap.dashed%20%7Bborder-style%3A%20dashed%3B%7D%0Ap.solid%20%7Bborder-style%3A%20solid%3B%7D%0Ap.double%20%7Bborder-style%3A%20double%3B%7D%0Ap.groove%20%7Bborder-style%3A%20groove%3B%7D%0Ap.ridge%20%7Bborder-style%3A%20ridge%3B%7D%0Ap.inset%20%7Bborder-style%3A%20inset%3B%7D%0Ap.outset%20%7Bborder-style%3A%20outset%3B%7D%0Ap.none%20%7Bborder-style%3A%20none%3B%7D%0Ap.hidden%20%7Bborder-style%3A%20hidden%3B%7D%0Ap.mix%20%7Bborder-style%3A%20dotted%20dashed%20solid%20double%3B%7D%0A
